@@ -30,4 +30,12 @@ public class Book {
     return booksCounter;
   }
 
+  @Override
+  public String toString() {
+    return "Book{" +
+      "title='" + title + '\'' +
+      ", author='" + author + '\'' +
+      ", id=" + id +
+      '}';
+  }
 }

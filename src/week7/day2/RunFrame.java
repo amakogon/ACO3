@@ -9,10 +9,13 @@ public class RunFrame {
 
     library.addBook(new Book("Biography Keicy", "Palanic"));
     library.addBook(new Book("King", "Shining"));
-    library.addBook(new Book("Janna", "Wonderfull garden"));
-    library.addBook(new Book("Anonimous", "Hard management"));
-    library.addBook(new Book("Branbery", "451"));
+    library.addBook(new Book("Janna", "Wonderful garden"));
+    library.addBook(new Book("Anonymous", "Hard management"));
+    library.addBook(new Book("Bradbery", "451"));
 
     new LibraryFrame(library);
+
+
+
   }
 }

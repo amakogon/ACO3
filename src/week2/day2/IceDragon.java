@@ -5,7 +5,7 @@ import week2.day1.Dragon;
 public class IceDragon extends Dragon {
   private int iceDamage;
 
-  public IceDragon(String name, String color){
+  public IceDragon(String name, String color) {
 //    super();
     super(name, color);
   }
@@ -26,6 +26,7 @@ public class IceDragon extends Dragon {
   public void fly() {
     super.fly();
   }
+
 
   public void freeze() {
     System.out.println("Freeze with damage " + iceDamage);

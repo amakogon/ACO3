@@ -1,5 +1,7 @@
 package week2.day1;
 
+import java.io.Serializable;
+
 public class Dragon {
   private String name;
   private String color;
@@ -56,4 +58,13 @@ public class Dragon {
     return name.equals(dragon.name) && color.equals(dragon.color);
   }
 
+  @Override
+  public String toString() {
+    return "Dragon{" +
+      "name='" + name + '\'' +
+      ", color='" + color + '\'' +
+      ", age=" + age +
+      ", damage=" + damage +
+      '}';
+  }
 }

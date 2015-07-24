@@ -24,7 +24,6 @@ public class LibraryApp {
         Book newBook = new Book(title, author);
         library.addBook(newBook);
       }
-
     }
   }
 
