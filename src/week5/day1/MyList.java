@@ -1,12 +1,12 @@
 package week5.day1;
 
-public interface MyList {
+public interface MyList<T> extends Iterable<T>{
 
-  boolean add(Object object);
+  boolean add(T t);
 
-  Object get(int index);
+  T get(int index);
 
   int size();
 
-  Object remove(int index);
+  T remove(int index);
 }

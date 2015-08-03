@@ -1,12 +1,13 @@
 package week5.day1;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class MyArrayList implements MyList{
+public class MyArrayList<T> implements MyList<T>{
 
   private static final int DEFAULT_CAPACITY = 16;
 
-  private Object[] elements;
+  private T[] elements;
   private int index;
 
   public MyArrayList() {
@@ -14,12 +15,12 @@ public class MyArrayList implements MyList{
   }
 
   public MyArrayList(int capacity) {
-    elements = new Object[capacity];
+    elements = (T[]) new Object[capacity];
   }
 
-  public boolean add(Object object) {
+  public boolean add(T t) {
     ensureCapacity();
-    elements[index++] = object;
+    elements[index++] = t;
     return true;
   }
 
@@ -29,7 +30,7 @@ public class MyArrayList implements MyList{
     }
   }
 
-  public Object get(int index) {
+  public T get(int index) {
     return elements[index];
   }
 
@@ -38,7 +39,33 @@ public class MyArrayList implements MyList{
   }
 
   @Override
-  public Object remove(int index) {
+  public T remove(int index) {
     return null;
   }
+
+  @Override
+  public Iterator<T> iterator() {
+    return new MyArrayListIterator();
+  }
+
+  private class MyArrayListIterator implements Iterator<T>{
+    private int index = 0;
+
+    @Override
+    public boolean hasNext() {
+//      return elements[index] != null;
+      return index < size();
+    }
+
+    @Override
+    public T next() {
+      return elements[index++];
+    }
+
+    @Override
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+  }
+
 }
