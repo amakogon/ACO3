@@ -9,15 +9,16 @@ import java.util.List;
 
 public class Ex1 {
   public static void main(String[] args) {
-    MyList<String> list = new MyArrayList<String>();
+    MyList<String> list = new MyLinkedList<String>();
 //    List<String> list = new ArrayList<String>();
 
     list.add("1");
-//    list.add(2);
+    list.add("2");
+    list.add("3");
 //    list.add(new MyNumber(4));
 
-    char first = ((String) list.get(0)).charAt(0);
-    System.out.println(first);
+//    char first = ((String) list.get(0)).charAt(0);
+    System.out.println();
 
 
 

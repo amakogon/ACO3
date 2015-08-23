@@ -17,7 +17,9 @@ public class MyLinkedList<E> implements MyList<E>, MyDeque<E> {
       tail = head;
       return true;
     }
-    tail = new Node<E>(e, null, tail);
+    Node<E> node = new Node<E>(e, null, tail);
+    tail.next = node;
+    tail = node;
     size++;
     return true;
   }
